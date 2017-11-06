@@ -74,7 +74,7 @@ public class LineBreaker {
             StringBuilder NewFilePath = new StringBuilder(args[0]).insert(dotIndex, "_formatted");
 
             try {
-                OutputStream os = new FileOutputStream(new File(NewFilePath.toString()));
+                OutputStreamWriter os = new OutputStreamWriter (new FileOutputStream(new File(NewFilePath.toString())), encoding);
                 //write contents of chars to a file
                 for (char c : chars) {
                     os.write(c);
