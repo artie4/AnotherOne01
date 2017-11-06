@@ -9,9 +9,6 @@ public class LineBreaker {
         int LineLenght = Integer.parseInt(args[1]);
         String encoding;
         switch (args[2]) {
-            default:
-                encoding = "UTF-8";
-                break;
             case "windows-1251":
                 encoding = "windows-1251";
                 break;
@@ -24,6 +21,11 @@ public class LineBreaker {
             case "US-ASCII" :
                 encoding = "US-ASCII";
                 break;
+            case "Macintosh":
+                encoding = "x-MacCyrillic";
+                break;
+            default:
+                encoding = "UTF-8";
         }
 
         if (file.exists()) {
