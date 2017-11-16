@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class ValidEmail {
 
-    private static final String prototype = "\\w*[@]{1}\\w*[.]{1}[a-z]{2,}";
+    private static final String prototype = "\\w+@\\w+.[a-z]{2,}";
     private static final Pattern pattern = Pattern.compile(prototype);
 
     public static void main(String[] args) throws IOException {
